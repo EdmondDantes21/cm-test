@@ -1,0 +1,21 @@
+# Blueprint card + form for cm-test. Creates its own CompositionDefinition: use this OR cd.yaml, not both.
+# The generated Form needs objectFields to edit additionalParams as key/value rows:
+#   kubectl -n demo-system patch form <release>-form-not-alphabetical-order --type merge \
+#     -p '{"spec":{"widgetData":{"objectFields":[{"path":"additionalParams","displayField":"key"}]}}}'
+apiVersion: composition.krateo.io/v1-0-6
+kind: PortalBlueprintPage
+metadata:
+  name: cm-test
+  namespace: demo-system
+spec:
+  blueprint:
+    repo: cm-test
+    url: oci://ghcr.io/edmonddantes21/cm-test
+    version: 0.1.0
+    hasPage: false
+  form:
+    alphabeticalOrder: false
+  panel:
+    title: CM Test
+    icon:
+      name: fa-file-lines
