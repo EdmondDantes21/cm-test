@@ -1,0 +1,11 @@
+{{- $data := dict }}
+{{- range .Values.additionalParams }}
+{{- $_ := set $data .key .value }}
+{{- end }}
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: {{ (default dict .Values.global).compositionName | default .Release.Name }}
+  namespace: {{ .Release.Namespace }}
+data:
+  {{- toYaml $data | nindent 2 }}
