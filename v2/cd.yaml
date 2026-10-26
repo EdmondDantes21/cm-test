@@ -8,3 +8,9 @@ spec:
     repo: cm-test
     url: oci://ghcr.io/edmonddantes21/cm-test
     version: "2.0.0"
+    credentials:
+      username: EdmondDantes21
+      passwordRef:
+        name: ghcr-cm-test
+        namespace: krateo-system
+        key: token
