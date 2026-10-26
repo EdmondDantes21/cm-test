@@ -1,9 +1,9 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "additionalProperties": false,
+  "additionalProperties": true,
   "properties": {
     "gitops": {
-      "additionalProperties": false,
+      "additionalProperties": true,
       "description": "A Helm chart for Kubernetes",
       "properties": {
         "repoName": {
