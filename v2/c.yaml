@@ -1,0 +1,10 @@
+apiVersion: composition.krateo.io/v2-0-0
+kind: CmTest
+metadata:
+  name: cm-test-v2
+  namespace: demo-system
+spec:
+  gitops:
+    repoName: demo-app
+    branch: main
+    environment: dev

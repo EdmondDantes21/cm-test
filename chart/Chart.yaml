@@ -1,0 +1,5 @@
+apiVersion: v2
+name: cm-test
+description: Creates one ConfigMap from the gitops values
+type: application
+version: 1.0.0

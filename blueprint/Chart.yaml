@@ -1,5 +1,0 @@
-apiVersion: v2
-name: cm-test
-description: Creates one ConfigMap from a user-defined list of key/value pairs
-type: application
-version: 0.1.0

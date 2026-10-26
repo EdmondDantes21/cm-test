@@ -1,0 +1,28 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "additionalProperties": false,
+  "properties": {
+    "gitops": {
+      "additionalProperties": false,
+      "description": "A Helm chart for Kubernetes",
+      "properties": {
+        "repoName": {
+          "default": "demo-app",
+          "type": "string"
+        },
+        "branch": {
+          "default": "main",
+          "type": "string"
+        },
+        "environment": {
+          "default": "dev",
+          "type": "string"
+        }
+      },
+      "required": [],
+      "title": "krateo-template-cicd-gitops",
+      "type": "object"
+    }
+  },
+  "type": "object"
+}

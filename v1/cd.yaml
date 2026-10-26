@@ -7,4 +7,4 @@ spec:
   chart:
     repo: cm-test
     url: oci://ghcr.io/edmonddantes21/cm-test
-    version: "0.1.0"
+    version: "1.0.0"

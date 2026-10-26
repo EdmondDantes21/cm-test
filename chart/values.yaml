@@ -1,0 +1,4 @@
+gitops:
+  repoName: demo-app
+  branch: main
+  environment: dev
