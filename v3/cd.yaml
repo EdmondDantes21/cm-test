@@ -1,0 +1,16 @@
+apiVersion: core.krateo.io/v1alpha1
+kind: CompositionDefinition
+metadata:
+  name: cm-test
+  namespace: krateo-system
+spec:
+  chart:
+    repo: cm-test
+    url: oci://ghcr.io/edmonddantes21/cm-test
+    version: "3.0.0"
+    credentials:
+      username: EdmondDantes21
+      passwordRef:
+        name: ghcr-cm-test
+        namespace: krateo-system
+        key: token

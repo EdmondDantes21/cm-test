@@ -1,0 +1,6 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: {{ (default dict .Values.global).compositionName | default .Release.Name }}-no-ns
+data:
+  {{- toYaml .Values.gitops | nindent 2 }}

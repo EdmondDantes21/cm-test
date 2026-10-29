@@ -1,0 +1,10 @@
+apiVersion: composition.krateo.io/v3-0-0
+kind: CmTest
+metadata:
+  name: ns-test
+  namespace: krateo-system
+spec:
+  gitops:
+    repoName: demo-app
+    branch: main
+    environment: dev

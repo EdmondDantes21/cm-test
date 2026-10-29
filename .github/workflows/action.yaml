@@ -25,5 +25,6 @@ jobs:
           VERSION: ${{ github.ref_name }}
         run: |
           echo "${{ secrets.GITHUB_TOKEN }}" | helm registry login ghcr.io -u "${{ github.actor }}" --password-stdin
+          helm dependency update chart
           helm package chart --version "${VERSION#v}" --app-version "${VERSION#v}"
           helm push cm-test-"${VERSION#v}".tgz oci://ghcr.io/edmonddantes21/cm-test
